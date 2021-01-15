@@ -1,68 +1,60 @@
-import React from 'react'
+import React, { Fragment } from 'react'
+import { Avatar, Button, Card, Tag } from 'antd';
 import styled from 'styled-components'
+import { whoList } from '../../../helpers/whoList';
 
-import { Card, Avatar } from 'antd'
+export const TaskCard = ({ taskId, changeTaskStatus, status, whatToDo, who, priority }) => {
 
-import Avatar1 from '../../../assets/avatar1.png'
-import Avatar2 from '../../../assets/avatar2.png'
-import Avatar3 from '../../../assets/avatar3.png'
-import Avatar4 from '../../../assets/avatar4.png'
-
-export const TaskCard = ({ whatToDo, who, priority }) => {
-    
-
-    const Footer = styled.div`
-    display: flex;
-    justify-content: space-between;`
-
-    const getPriorityAndSetIntoTitle = () => {
-        const urgencyColorPallete = [
-            {urgency: 'low', color: '#71A1FF'},
-            {urgency: 'average', color: '#F88D26'},
-            {urgency: 'high', color: '#FF7171'}
-        ]
-
-        const CardTitle = styled.span`
-        display:flex;
-        align-items: center;
-        `
-    
+    const getPriorityToSetIntoTitle = () => {
         const ColorBlock = styled.span`
         display: inline-block;
         height: 1rem;
         width: 1rem;
-        background-color: ${urgencyColorPallete.find(x => x.urgency === priority).color};
+        background-color: ${priority.color};
         margin-left: 1rem;
         `
 
+        const CardTitle = styled.span`
+        display: flex;
+        align-items: center;
+        `
         return <CardTitle> Priority <ColorBlock /> </CardTitle>
     }
 
     const getCardButtons = () => {
-        return <span> Buttons </span>
+        const ToDo = <Tag style={{ cursor: 'pointer' }} color="volcano" onClick={() => changeTaskStatus(taskId, 'To Do')}> To Do </Tag>
+        const Doing = <Tag style={{ cursor: 'pointer' }} color="magenta" onClick={() => changeTaskStatus(taskId, 'Doing')}> Doing </Tag>
+        const Done = <Tag style={{ cursor: 'pointer' }} color="green" onClick={() => changeTaskStatus(taskId, 'Done')}> Done </Tag>
+
+        switch (status) {
+            case 'To Do':
+                return [Doing, Done]
+            default:
+                return
+
+            case 'Doing':
+                return [ToDo, Done]
+
+            case 'Done':
+                return [ToDo, Doing]
+        }
     }
 
-    const generateWhoOnFooter = () => {
+    const Footer = styled.div` 
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    `
 
-        const AvalibleAvatars = [
-            {avatarIndex: 1, avatarSource: Avatar1},
-            {avatarIndex: 2, avatarSource: Avatar2},
-            {avatarIndex: 3, avatarSource: Avatar3},
-            {avatarIndex: 4, avatarSource: Avatar4},
-        ]
 
-        const selectAvatar = AvalibleAvatars.find(x => x.avatarIndex === who)
-
-        return <Avatar src={ <img src={selectAvatar.avatarSource} alt="Selected avatar"></img> } />
-    }
-
-    return <Card size="small" title={getPriorityAndSetIntoTitle()} extra={getCardButtons()}>
+    return <Card size="small" title={getPriorityToSetIntoTitle()} extra={getCardButtons()} style={{ marginBottom: '2rem' }}>
         <div>
             {whatToDo}
         </div>
         <Footer>
-            <span> Created at {new Date().toLocaleDateString()}</span>
-            <span> {generateWhoOnFooter()} </span>
+            <span> Created at {new Date().toLocaleDateString()} </span>
+
+            <Avatar src={<img src={whoList.find(x => x.idx === who).avatarSource} alt={`Avatar ${who}`} />} />
         </Footer>
     </Card>
 

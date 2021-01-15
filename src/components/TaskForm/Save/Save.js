@@ -1,20 +1,19 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { CheckOutlined } from '@ant-design/icons'
+import { CheckOutlined } from '@ant-design/icons';
+import { Spin } from 'antd';
 
-
-export const Save = () => {
+export const Save = ({ loading, saveTask }) => {
 
     const FormItem = styled.div`
     display: flex;
     flex-direction: column;
     width: 10%;
-    padding-left: 1rem;
-    `
+    padding-left: 1rem`
 
     const SaveLabel = styled.div`
-    font-size:30px
+    font-size: 30px;
     `
 
     const SaveButton = styled.div`
@@ -26,11 +25,14 @@ export const Save = () => {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 30px;
-    `
+    font-size: 30px`
+
 
     return <FormItem>
         <SaveLabel> Save? </SaveLabel>
-        <SaveButton> ✔ </SaveButton>
+        <Spin spinning={loading}>
+            <SaveButton onClick={saveTask}> <CheckOutlined /> </SaveButton>
+        </Spin>
     </FormItem>
+
 }

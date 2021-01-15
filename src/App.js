@@ -1,13 +1,9 @@
-import {Layout} from './pages/layout/Layout'
-import "./App.css";
-//import styled from 'styled-components'
+import './App.css';
+import { Layout } from './pages/Layout/Layout'
 
 function App() {
-  
   return (
-
-    <Layout/>
-
+    <Layout />
   );
 }
 
