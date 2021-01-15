@@ -1,7 +1,9 @@
 import  React, { useState } from 'react'
 import styled from 'styled-components'
+import uniqid from 'uniqid'
 
 export const ItIsUrgent = () => {
+
 
     const [urgencyScale, setUrgencyScale] = useState([
         {
@@ -61,7 +63,7 @@ export const ItIsUrgent = () => {
 
         return urgencyScale.map(urgency => {
             if(urgency.selected){
-                return <div 
+                return <div key={uniqid()}
                     style={{
                         backgroundColor: urgency.color,
                         width: 'calc(2.5rem + 5px)',
@@ -73,7 +75,7 @@ export const ItIsUrgent = () => {
                     }}
                 />
             }
-            return <div style={{
+            return <div key={uniqid()} style={{
                 backgroundColor: urgency.color,
                 width: '2.5rem',
                 height: '2.5rem',

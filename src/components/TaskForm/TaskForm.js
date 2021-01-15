@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import {WhatToDo} from './WathToDo/WhatToDo'
 import {Who} from './Who/Who';
 import {ItIsUrgent} from './IsItUrgent/ItIsUrgent';
+import {Save} from './Save/Save'
 
 
 
@@ -19,6 +20,7 @@ export const TaskForm = () =>{
             <WhatToDo></WhatToDo>
             <Who />
             <ItIsUrgent />
+            <Save />
     </TaskFormLayout>
 
 }
