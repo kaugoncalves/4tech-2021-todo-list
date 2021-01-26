@@ -7,6 +7,11 @@
 
 ![](https://github.com/kaugoncalves/4tech-2021-todo-list/blob/master/print%202.png?raw=true)
 
+# Como baixar ⬇
+- Instale o projeto em sua máquina
+- Abra o terminal
+- Rode o comando "npm install"
+- Logo após rode o comando "npm start" que o site abrirá em seu navegador padrão
 
 # Technologies 🖥️
 - Node.js
