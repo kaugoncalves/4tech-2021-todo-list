@@ -14,7 +14,7 @@ export const Who = ({ initialSelectedWho, onChangeSelectedWho }) => {
     display: flex;
     flex-direction: column;
     width: 30%;
-    padding-left: 1rem`
+    padding-left: 1rem;`
 
     const WhoLabel = styled.div`
     font-size: 30px;
