@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/4tech-2021-todo-list/static/css/main.89f25576.chunk.css",
+    "main.js": "/4tech-2021-todo-list/static/js/main.1c425167.chunk.js",
+    "main.js.map": "/4tech-2021-todo-list/static/js/main.1c425167.chunk.js.map",
+    "runtime-main.js": "/4tech-2021-todo-list/static/js/runtime-main.c7e262ec.js",
+    "runtime-main.js.map": "/4tech-2021-todo-list/static/js/runtime-main.c7e262ec.js.map",
+    "static/css/2.b544de60.chunk.css": "/4tech-2021-todo-list/static/css/2.b544de60.chunk.css",
+    "static/js/2.91780af3.chunk.js": "/4tech-2021-todo-list/static/js/2.91780af3.chunk.js",
+    "static/js/2.91780af3.chunk.js.map": "/4tech-2021-todo-list/static/js/2.91780af3.chunk.js.map",
+    "static/js/3.0805de13.chunk.js": "/4tech-2021-todo-list/static/js/3.0805de13.chunk.js",
+    "static/js/3.0805de13.chunk.js.map": "/4tech-2021-todo-list/static/js/3.0805de13.chunk.js.map",
+    "index.html": "/4tech-2021-todo-list/index.html",
+    "static/css/2.b544de60.chunk.css.map": "/4tech-2021-todo-list/static/css/2.b544de60.chunk.css.map",
+    "static/css/main.89f25576.chunk.css.map": "/4tech-2021-todo-list/static/css/main.89f25576.chunk.css.map",
+    "static/js/2.91780af3.chunk.js.LICENSE.txt": "/4tech-2021-todo-list/static/js/2.91780af3.chunk.js.LICENSE.txt",
+    "static/media/avatar1.00d92f05.png": "/4tech-2021-todo-list/static/media/avatar1.00d92f05.png",
+    "static/media/avatar2.92e24b05.png": "/4tech-2021-todo-list/static/media/avatar2.92e24b05.png",
+    "static/media/avatar3.72ef8f65.png": "/4tech-2021-todo-list/static/media/avatar3.72ef8f65.png",
+    "static/media/avatar4.30d46c24.png": "/4tech-2021-todo-list/static/media/avatar4.30d46c24.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c7e262ec.js",
+    "static/css/2.b544de60.chunk.css",
+    "static/js/2.91780af3.chunk.js",
+    "static/css/main.89f25576.chunk.css",
+    "static/js/main.1c425167.chunk.js"
+  ]
+}
